@@ -24,3 +24,13 @@ class Calculator(object):
     def div(self, xxx, yyy):
         """ divide """
         return xxx / yyy
+
+    def operator(self, opr, xxx, yyy):
+        if opr == 'add':
+            return self.add(xxx, yyy)
+        elif opr == 'sub':
+            return self.sub(xxx, yyy)
+        elif opr == 'mult':
+            return self.mult(xxx, yyy)
+        elif opr == 'div':
+            return self.div(xxx, yyy)

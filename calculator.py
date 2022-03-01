@@ -7,3 +7,5 @@
 def calculator(opr, xxx, yyy):
     if opr == 'add':
         return xxx + yyy
+    elif opr == 'mult':
+        return xxx * yyy

@@ -20,3 +20,8 @@ Feature: Test Calculator Functionality
       Given I have the numbers 10 and 5
       When I div them
       Then I expect the result to be 2
+
+  Scenario: Modulus
+      Given I have the numbers 10 and 5
+      When I mod them
+      Then I expect the result to be 1

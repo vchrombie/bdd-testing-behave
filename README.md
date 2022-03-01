@@ -29,6 +29,7 @@ $ poetry add behave
 
 ## Example
 
+### tests pass
 ```
 (.venv) $ behave
 Feature: Test Calculator Functionality # features/calculator.feature:2
@@ -57,8 +58,36 @@ Feature: Test Calculator Functionality # features/calculator.feature:2
 4 scenarios passed, 0 failed, 0 skipped
 12 steps passed, 0 failed, 0 skipped, 0 undefined
 Took 0m0.003s
-
 ```
+
+### tests fail
+```
+(.venv) $ behave
+Feature: Test Calculator Functionality # features/calculator.feature:2
+
+  . . .
+
+  Scenario: Modulus                   # features/calculator.feature:24
+    Given I have the numbers 10 and 5 # features/steps/steps.py:4 0.000s
+    When I mod them                   # features/steps/steps.py:11 0.000s
+    Then I expect the result to be 1  # features/steps/steps.py:21 0.000s
+      Assertion Failed: Expected 1, got 0
+      Captured stdout:
+      STEP: Given I have the numbers 10 and 5
+      STEP: When I add them
+      STEP: Then I expect the result to be 1
+
+
+
+Failing scenarios:
+  features/calculator.feature:24  Modulus
+
+0 features passed, 1 failed, 0 skipped
+4 scenarios passed, 1 failed, 0 skipped
+14 steps passed, 1 failed, 0 skipped, 0 undefined
+Took 0m0.002s
+```
+
 
 ## Resources
 

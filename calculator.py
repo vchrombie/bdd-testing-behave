@@ -4,8 +4,15 @@
 # Simple Calculator
 #
 
-def calculator(opr, xxx, yyy):
-    if opr == 'add':
+class Calculator(object):
+    def __init__(self, caching=True):
+        """ init """
+        pass
+
+    def add(self, xxx, yyy):
+        """ addition """
         return xxx + yyy
-    elif opr == 'mult':
+
+    def mult(self, xxx, yyy):
+        """ multiply """
         return xxx * yyy

@@ -1,8 +1,8 @@
-from calculator import calculator
+from calculator import Calculator
 
 
 def before_all(context):
-    context.calculator = calculator
+    context.calculator = Calculator()
 
 
 def after_all(context):

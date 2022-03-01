@@ -8,14 +8,21 @@ def step_impl(context, num1, num2):
     context.num2 = int(num2)
 
 
-@when(u'I {opr} them')
-def step_impl(context, opr):
-    print(u'STEP: When I {} them'.format(opr))
-    context.opr = opr
-    context.result = context.calculator(
-        context.opr,
+@when(u'I add them')
+def step_impl(context):
+    print(u'STEP: When I add them')
+    context.result = context.calculator.add(
         context.num1,
-        context.num2,
+        context.num2
+    )
+
+
+@when(u'I mult them')
+def step_impl(context):
+    print(u'STEP: When I mult them')
+    context.result = context.calculator.mult(
+        context.num1,
+        context.num2
     )
 
 

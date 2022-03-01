@@ -13,6 +13,14 @@ class Calculator(object):
         """ addition """
         return xxx + yyy
 
+    def sub(self, xxx, yyy):
+        """ substraction """
+        return xxx - yyy
+
     def mult(self, xxx, yyy):
         """ multiply """
         return xxx * yyy
+
+    def div(self, xxx, yyy):
+        """ divide """
+        return xxx / yyy

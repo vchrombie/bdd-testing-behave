@@ -17,10 +17,28 @@ def step_impl(context):
     )
 
 
+@when(u'I sub them')
+def step_impl(context):
+    print(u'STEP: When I sub them')
+    context.result = context.calculator.sub(
+        context.num1,
+        context.num2
+    )
+
+
 @when(u'I mult them')
 def step_impl(context):
     print(u'STEP: When I mult them')
     context.result = context.calculator.mult(
+        context.num1,
+        context.num2
+    )
+
+
+@when(u'I div them')
+def step_impl(context):
+    print(u'STEP: When I div them')
+    context.result = context.calculator.div(
         context.num1,
         context.num2
     )
